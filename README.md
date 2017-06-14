@@ -14,7 +14,7 @@ Existing WordPress plugins either:
 <https://code.tutsplus.com/tutorials/extending-the-default-wordpress-rss-feed--wp-27935>
 
 ## Copyright
-Copyright (c) 2016 [Mark Grealish][4]. See [LICENSE](LICENSE) for details.
+Copyright (c) 2017 [Mark Grealish][2]. See [LICENSE](LICENSE) for details.
 
 > This program is free software; you can redistribute it and/or modify
 > it under the terms of the GNU General Public License as published by
@@ -27,3 +27,4 @@ Copyright (c) 2016 [Mark Grealish][4]. See [LICENSE](LICENSE) for details.
 > GNU General Public License for more details.
 
 [1]: http://www.rssboard.org/media-rss#media-content "media:content"
+[2]: https://www.bhalash.com "Real Men Wear Beards"
