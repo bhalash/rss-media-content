@@ -3,7 +3,7 @@
 /*
  * Plugin Name: RSS Media Content
  * Description: Add a post's featured image to the RSS media:content field for that item.
- * Version:     1.0.0
+ * Version:     1.0.1
  * Plugin URI:  https://github.com/bhalash/rss-media-content
  * Author:      Mark Grealish
  * Author URI:  https://www.bhalash.com/
@@ -50,12 +50,12 @@ function rss_media_content() {
 }
 
 if (WP_DEBUG === true) {
-    // Forcibly clear RSS cache.
+    // Forcibly clear the WordPress RSS cache.
     add_action('wp_feed_options', function(&$feed) { $feed->enable_cache(false); });
     add_filter('wp_feed_cache_transient_lifetime', function($seconds) { return 1; });
 }
 
 // Hook into RSS feed.
-add_filter('rss2_item', 'rss_media_content');
+add_filter('rss2_item', 'rss_media_content', 99, 0);
 
 ?>
