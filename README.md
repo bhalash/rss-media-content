@@ -10,7 +10,7 @@ Existing WordPress plugins either:
 3. Don't work in a valid manner. The current top hit for "WordPress RSS featured image" inserts HTML into the `<description>` field, which is neither standard nor machine-readable.
 
 ## More Information
-<http://www.rssboard.org/media-rss#media-content>
+<http://www.rssboard.org/media-rss#media-content>  
 <https://code.tutsplus.com/tutorials/extending-the-default-wordpress-rss-feed--wp-27935>
 
 ## Copyright
