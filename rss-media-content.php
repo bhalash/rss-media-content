@@ -31,21 +31,17 @@ function rss_media_content() {
 
     if (has_post_thumbnail($post->ID)) {
         $image_metadata = wp_get_attachment_metadata(get_post_thumbnail_id($post->ID));
+        $image_url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
         $author = get_userdata($post->post_author)->display_name;
-
-        // Image description.
-        $description = printf('<media:description type="plain"><![CDATA[%s]]></media:description>', $post->post_title);
-        // Post creator.
-        $copyright = printf('<media:copyright>%s</media:copyright>', $author);
 
         printf(
             '<media:content url="%s" type="%s" medium="image" width="%s" height="%s">%s%s</media:content>',
-            wp_get_attachment_url(get_post_thumbnail_id($post->ID)), // src
-            $image_metadata['sizes']['thumbnail']['mime-type'], // mimetype
-            $image_metadata['width'], // width
-            $image_metadata['height'], // height
-            $description,
-            $copyright
+            $image_url,
+            $image_metadata['sizes']['thumbnail']['mime-type'],
+            $image_metadata['width'],
+            $image_metadata['height'],
+            printf('<media:description type="plain"><![CDATA[%s]]></media:description>', $post->post_title),
+            printf('<media:copyright>%s</media:copyright>', $author)
         );
     }
 }
