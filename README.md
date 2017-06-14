@@ -1,9 +1,7 @@
 # RSS Media Content
 This plugin adds a valid [media:content][1] entry to the RSS entry for a given post item, if a featured image exists.
 
-Add post's featured image to the RSS feed. Inspired by code featured
-
-Existing WordPress plugins either:
+Add post's featured image to the RSS feed. I wrote this because existing WordPress plugins:
 
 1. Cram in adverts to upsell you to their pro version. Screw that noise.
 2. Just don't work because they are outdated.
