@@ -5,7 +5,7 @@ Add post's featured image to the RSS feed. Inspired by code featured
 
 Existing WordPress plugins either:
 
-1. Cram in adverts to upsell you to their pro version. Fuck that noise.
+1. Cram in adverts to upsell you to their pro version. Screw that noise.
 2. Just don't work because they are outdated.
 3. Don't work in a valid manner. The current top hit for "WordPress RSS featured image" inserts HTML into the `<description>` field, which is neither standard nor machine-readable.
 
