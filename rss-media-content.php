@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Plugin Name: RSS Media Content
  * Description: Add a post's featured image to the RSS media:content field for that item.
