@@ -33,6 +33,10 @@ function rss_media_content() {
         $image_metadata = wp_get_attachment_metadata(get_post_thumbnail_id($post->ID));
         $image_url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
         $author = get_userdata($post->post_author)->display_name;
+        $title = $post->post_title;
+        
+        $description = printf('<media:description type="plain"><![CDATA[%s]]></media:description>', $title);
+        $media_author = printf('<media:copyright>%s</media:copyright>', $author);
 
         printf(
             '<media:content url="%s" type="%s" medium="image" width="%s" height="%s">%s%s</media:content>',
@@ -40,8 +44,8 @@ function rss_media_content() {
             $image_metadata['sizes']['thumbnail']['mime-type'],
             $image_metadata['width'],
             $image_metadata['height'],
-            printf('<media:description type="plain"><![CDATA[%s]]></media:description>', $post->post_title),
-            printf('<media:copyright>%s</media:copyright>', $author)
+            $description,
+            $media_author
         );
     }
 }
